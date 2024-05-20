@@ -1,0 +1,23 @@
+##Controler
+-HomeController
+  index()
+-PageController
+  index()
+  detailPage($id)
+-PengumumanController
+  index()
+  detail($id)
+
+
+
+
+#mang radit
+-BeritaController
+  -index()
+  detailBerita()
+-AlbumController
+  -index()
+  -detail($id)
+-DownloadController
+  -index()
+  -download($filename)
