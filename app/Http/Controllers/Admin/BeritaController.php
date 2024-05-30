@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
 use Illuminate\Http\Request;
 
 class BeritaController extends Controller
@@ -12,7 +13,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        $berita = Berita::all();
+        return view('admin.berita.index', compact('berita'));
     }
 
     /**
@@ -20,7 +22,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.berita.create');
     }
 
     /**

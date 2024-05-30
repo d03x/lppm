@@ -15,11 +15,11 @@ class LoginController extends Controller
     public function loginProsess(Request $request)
     {
         $data = $request->validate([
-            'email' => "required|email:dns",
+            'email' => "required|email",
             'password' => "required"
         ]);
         if (Auth::attempt($data)) {
-            return;
+            return redirect()->route('admin.index');
         }
         return redirect()->back()->withInput($data)->withErrors([
             'email' => 'Email tidak di temukan'
