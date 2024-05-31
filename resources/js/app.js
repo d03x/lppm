@@ -1,6 +1,11 @@
 import './bootstrap';
 import 'boxicons';
 
+const toggleMenu = document.getElementById('toggle_menu')
+toggleMenu.addEventListener('click',()=>{
+    const menu_mobile = document.querySelector('.menu_mobile');
+    menu_mobile.classList.toggle('open');
+})
 // const button_kajian = document.getElementById('button_kajian');
 // button_kajian.onclick = () =>{
 //     document.getElementById('menu_kajian').classList.toggle('open')

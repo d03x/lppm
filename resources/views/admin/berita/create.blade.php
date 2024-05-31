@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="isi" class="form-label">ISI</label>
-                    <div  id="editor"></div>
+                    <div id="editor"></div>
                 </div>
 
             </div>
@@ -53,13 +53,13 @@
     <script src="{{ asset('admin-assets/libs/quil/main.js') }}"></script>
     <script>
         const options = {
-  debug: 'info',
-  modules: {
-    toolbar: true,
-  },
-  placeholder: 'Compose an epic...',
-  theme: 'snow'
-};
+            debug: 'info',
+            modules: {
+                toolbar: true,
+            },
+            placeholder: 'Compose an epic...',
+            theme: 'snow'
+        };
         const quill = new Quill('#editor', options);
     </script>
 @endsection

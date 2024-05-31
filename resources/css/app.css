@@ -4,9 +4,10 @@
 @tailwind utilities;
 
 *{
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     font-style: normal;
+  
 
 }
 #button_kajian:hover ~ .menu {
@@ -25,12 +26,71 @@
     @apply bg-primary;
 }
 .hamburger_menu span{
-    @apply h-1 mb-1 w-8 rounded-lg bg-white block;
+    @apply block w-8 h-1 mb-1 bg-white rounded-lg;
 }
 .main_menu{
     transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .main_menu.open_menu{
-    @apply sm:block left-0; 
+    @apply left-0 sm:block; 
     transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.dropdown:hover  .dropdown_menu{
+    background-color: red;
+}
+.menu-item{
+    @apply w-full;
+}
+.home_slider::after{
+       content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 115deg, rgb(0,0,0) 29%, #E67E22  85%);
+    opacity: .8;
+    z-index: 1;
+}
+.news_item_card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 0.397) 20%, #000000  85%);
+    opacity: .8;
+    z-index: 1; 
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 20px;
+}
+.swiper-pagination-bullet .swiper-pagination-bullet-active{
+    @apply bg-warna1;
+}
+.agenda-item.active{
+    @apply border-t-warna1 bg-warna1/10 text-warna1;
+}
+.menu_mobile{
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @apply invisible opacity-0 sm:visible sm:opacity-100;
+}
+.menu_mobile.open{
+    @apply visible opacity-100;
+}
+
+.berita_detail_header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 30deg, #000000 50%, rgba(0, 0, 0, 0.616)  85%);
+    opacity: .8;
+    z-index: 1; 
 }
