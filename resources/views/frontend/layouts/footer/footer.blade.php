@@ -61,7 +61,7 @@
 
     <div class="bg-[#E67E22]">
         <div class="container px-3 sm:px-24">
-            <div class="flex flex-col items-center justify-between py-4 text-sm text-white sm:h-12 sm:flex-row">
+            <div class="flex flex-col items-center justify-between py-4 text-xs text-white sm:h-12 sm:flex-row">
                 <div>
                     <p>
                         &copy; LPPM STMIK Mardira Indonesia
