@@ -1,6 +1,6 @@
 <div class="grid space-y-3">
     <div class="">
-        <div class="flex w-full gap-1 px-3 py-2 font-bold text-white rounded bg-warna1">
+        <div class="flex w-full gap-1 px-3 py-2 font-bold text-white rounded bg-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48">
                 <rect width="48" height="48" fill="none" />
                 <g fill="currentColor">
@@ -20,7 +20,7 @@
             @foreach (range(1, 5) as $item)
                 <a href="">
                     <div
-                        class="flex bg-gray-200 group hover:bg-warna1/10 transition-all hover:border-t-warna1 hover:text-warna1 border-t-gray-300 border-t-[3px] text-gray-800 p-2 rounded-lg items-center gap-3 agenda-item {{ $item == 1 ? 'active' : '' }}">
+                        class="flex bg-gray-200 group hover:bg-primary/10 transition-all hover:border-t-primary hover:text-primary border-t-gray-300 border-t-[3px] text-gray-800 p-2 rounded-lg items-center gap-3 agenda-item {{ $item == 1 ? 'active' : '' }}">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                 viewBox="0 0 24 24">
@@ -65,7 +65,7 @@
                             </div>
                             <a href="">
                                 <p class="text-sm line-clamp-1 sm:line-clamp-4">
-                                    {{ fake()->sentence(30) }}
+                                    Penelitian bidang web development
                                 </p>
                             </a>
                         </div>
@@ -74,11 +74,11 @@
             @endforeach
         </div>
         <a href=""
-            class="block w-full p-2 mt-4 text-sm text-center text-white rounded-lg bg-gradient-to-r from-red-500 bg-warna1 hover:bg-warna1/80">Lebih
+            class="block w-full p-2 mt-4 text-sm text-center text-white rounded-lg bg-gradient-to-r from-red-500 bg-primary hover:bg-primary/80">Lebih
             Banyak</a>
     </div>
     <div class="">
-        <div class="flex items-center w-full gap-2 px-3 py-2 font-bold text-white rounded bg-warna1">
+        <div class="flex items-center w-full gap-2 px-3 py-2 font-bold text-white rounded bg-primary">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                     viewBox="0 0 20 20">
@@ -91,10 +91,10 @@
         </div>
         <div class="grid grid-cols-1 gap-2 mt-3">
             <ul class="flex flex-col">
-                @foreach (range(0, 5) as $item)
+                @foreach (range(0, 3) as $item)
                     <li class="text-sm">
                         <a href=""
-                            class="flex items-start gap-2 p-2 transition-all border border-transparent rounded-lg hover:bg-warna1/10 hover:text-warna1 hover:border-warna1 hover:border text-neutral-800 group hover:bg-secondary">
+                            class="flex items-start gap-2 p-2 transition-all border border-transparent rounded-lg hover:bg-primary/10 hover:text-primary hover:border-primary hover:border text-neutral-800 group hover:bg-secondary">
                             <span class="animate-pulse">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24">

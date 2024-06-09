@@ -5,48 +5,51 @@
 @endsection
 
 @section('content')
-    {{-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
 
-        <div class="swiper-wrapper sm:h-auto">
+        <div class="swiper-wrapper sm:max-h-[380px] sm:h-auto">
 
             @foreach (range(0, 10) as $item)
-                <div class="swiper-slide home_slider  sm:max-h-[400px] w-full h-full max-h-[600px] relative">
-                  <div class="container">
+                <div style="background-image: url('https://stmik-mi.ac.id/assets/img/slider/1.jpg');background-repeat:no-repeat;background-size:cover;" class="relative w-full h-full max-h-full py-10 overflow-hidden swiper-slide home_slider">
                     <div class="">
-                        <img class="w-full" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
+                        <img class="w-full h-full" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
                     </div>
-                    <div class="absolute top-0 bottom-0 z-10 flex flex-col gap-2 p-6 font-bold text-white px-14 sm:p-24 lef-0">
-                        <div class="text-lg sm:text-6xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#E67E22] to-white" data-swiper-parallax="-300">
-                            Kegiatan pembinaan masyarakat di desa mekars
-                        </div>
-                        <div class="text-sm" data-swiper-parallax="-200">Artikel</div>
-                        <div class="text sm:pr-32" data-swiper-parallax="-100">
-                            <p ata-swiper-parallax="-800" class="line-clamp-2 break-before-all sm:line-clamp-none">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                                Integer laoreet magna nec elit suscipit, ac laoreet nibh 
-                            </p>
-                            <a href="" class="inline-block p-2 mt-3 text-sm text-white transition-all bg-transparent border border-white rounded hover:bg-white hover:text-warna1">Baca Selengkapnya</a>
+                    <div class="container px-0 sm:px-24">
+
+                        <div
+                            class="absolute top-0 bottom-0 z-10 flex flex-col gap-2 px-3 py-12 font-bold text-white sm:px-14 sm:p-24 lef-0">
+                            <div class="text-lg sm:text-5xl line-clamp-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#E67E22] to-white"
+                                data-swiper-parallax="-300">
+                                Kami ingin mengingatkan kalian semua untuk selalu update dengan kalender akademik
+                                terbaru
+                            </div>
+                            <div class="text-sm" data-swiper-parallax="-200">Artikel</div>
+                            <div class="text sm:pr-32" data-swiper-parallax="-100">
+                                <p ata-swiper-parallax="-800"
+                                    class="text-sm line-clamp-2 break-before-all sm:line-clamp-none">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh
+                                </p>
+                                <a href=""
+                                    class="inline-block p-2 mt-3 text-sm text-white transition-all bg-transparent border border-white rounded hover:bg-white hover:text-warna1">Baca
+                                    Selengkapnya</a>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
             @endforeach
         </div>
-        <div class="text-sm rounded-lg swiper-button-next bg-warna1 h-9 w-9"></div>
-        <div class="text-sm rounded-lg swiper-button-prev bg-warna1 h-9 w-9"></div>
+
         <div class="swiper-pagination"></div>
-    </div> --}}
-
-
-
+    </div>
     <main class="block mt-4 mb-6">
         <div class="container flex flex-col px-4 mx-auto mt-3 space-y-4 sm:px-24">
             <div class="flex flex-col w-full gap-4 sm:flex-row">
 
                 <div class="w-full">
-                    <div class="flex items-center w-full gap-2 px-3 py-2 font-bold text-white rounded bg-warna1">
+                    <div class="flex items-center w-full gap-2 px-3 py-2 font-bold text-white rounded bg-primary">
                         <span class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
                                 <rect width="20" height="20" fill="none" />
@@ -59,39 +62,147 @@
                         <span class="font-bold">Berita Terbaru LPPM</span>
                     </div>
                     <div class="grid grid-cols-1 gap-5 mt-4 sm:grid-cols-2">
-                        @foreach (range(1, 4) as $item)
-                           <a href="{{ route('berita.detail',['month'=>18,'year'=>2024,'slug'=>'berita-indonesia-merdeka']) }}">
+
+                        <a
+                            href="{{ route('berita.detail', ['month' => 18, 'year' => 2024, 'slug' => 'berita-indonesia-merdeka']) }}">
                             <div class="p-0 overflow-hidden bg-white rounded shadow-sm sm:p-2">
-                                <img class="rounded-lg" src="data:image/jpeg;base64,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"
-                                    alt="">
+                                <img class="rounded-lg" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
                                 <div class="flex flex-col gap-2 mt-2">
-                                    <h1 class="text-lg font-bold tracking-tight text-warna1">
-                                        {{ fake()->sentence() }}
+                                    <h1 class="text-lg font-bold tracking-tight text-warna1 line-clamp-2">
+                                        Segenap Civitas Academica STMIK Mardira Indonesia mengucapkan,
                                     </h1>
                                     <div>
                                         <span class="text-xs">18 Oktober 2023 18:00</span>
                                     </div>
-                                    <p class="text-sm">
-                                        Pada tanggal 13-14 Mei 2024, telah dilaksanakan seminar penelitian yang melibatkan
-                                        16 mitra luar negeri. Seminar ini merupakan ajang untuk berbagi pen ...
+                                    <p class="text-sm line-clamp-3">
+                                        Kami ingin mengingatkan kalian semua untuk selalu update dengan kalender akademik
+                                        terbaru. Jangan sampai ketinggalan tanggal-tanggal penting yang bisa mempengaruhi
+                                        perjalanan akademik kamu. Mulai dari jadwal ujian, masa registrasi, hingga hari
+                                        libur akademik, semuanya penting untuk kamu ketahui dan simpan baik-baik. Share dan
+                                        save kalender akademik ini yaa, biar kamu selalu siap dan terencana dalam menjalani
+                                        masa studi di STMIK Mardira.
+
                                     </p>
                                 </div>
                             </div>
                         </a>
-                        @endforeach
+
+
+                        <a
+                            href="{{ route('berita.detail', ['month' => 18, 'year' => 2024, 'slug' => 'berita-indonesia-merdeka']) }}">
+                            <div class="p-0 overflow-hidden bg-white rounded shadow-sm sm:p-2">
+                                <img class="rounded-lg" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <h1 class="text-lg font-bold tracking-tight text-warna1 line-clamp-2">
+                                        STMIK Mardira mengucapkan Selamat memperingati Isra Mi'raj! Semoga berkah dan rahmat
+                                        Allah senantiasa menyertai kita semua dalam setiap langkah kehidupan.
+                                    </h1>
+                                    <div>
+                                        <span class="text-xs">18 Oktober 2023 18:00</span>
+                                    </div>
+                                    <p class="text-sm line-clamp-3">
+                                        STMIK Mardira mengucapkan Selamat memperingati Isra Mi'raj! Semoga berkah dan rahmat
+                                        Allah senantiasa menyertai kita semua dalam setiap langkah kehidupan. Peristiwa Isra
+                                        Mi'raj adalah momen penting dalam sejarah Islam yang mengingatkan kita akan
+                                        kebesaran Allah dan kebesaran Rasulullah SAW dalam menjalankan misi kenabian.
+
+                                        Isra Mi'raj bukan hanya sebuah perjalanan fisik, tetapi juga perjalanan spiritual
+                                        yang menginspirasi kita semua untuk meningkatkan ketaqwaan, keimanan, dan kebaikan
+                                        dalam hidup kita. Semoga peristiwa ini menjadi momentum bagi kita untuk lebih
+                                        mendekatkan diri kepada Allah SWT dan selalu mendapatkan petunjuk serta hidayah-Nya
+                                        dalam setiap keputusan dan langkah yang kita ambil.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="{{ route('berita.detail', ['month' => 18, 'year' => 2024, 'slug' => 'berita-indonesia-merdeka']) }}">
+                            <div class="p-0 overflow-hidden bg-white rounded shadow-sm sm:p-2">
+                                <img class="rounded-lg" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <h1 class="text-lg font-bold tracking-tight text-warna1 line-clamp-2">
+                                        Selamat Hari Kartini, para perempuan Indonesia yang hebat! Mari kenang perjuangan
+                                        R.A. Kartini yang telah membuka jalan bagi emansipasi perempuan di Indonesia
+                                    </h1>
+                                    <div>
+                                        <span class="text-xs">18 Oktober 2023 18:00</span>
+                                    </div>
+                                    <p class="text-sm line-clamp-3">
+                                        Selamat Hari Kartini, para perempuan Indonesia yang hebat! Mari kenang perjuangan
+                                        R.A. Kartini yang telah membuka jalan bagi emansipasi perempuan di Indonesia. Di era
+                                        modern ini, peran perempuan sangat penting dalam berbagai bidang. Jangan pernah
+                                        menyerah menghadapi tantangan dan teruslah berjuang untuk kemajuan dan kemandirian.
+
+                                        Tingkatkan kualitas diri dalam pendidikan, karier, dan kehidupan sosial. Sikap
+                                        positif dan semangat juang adalah kunci untuk mencapai impian dan tujuan.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="{{ route('berita.detail', ['month' => 18, 'year' => 2024, 'slug' => 'berita-indonesia-merdeka']) }}">
+                            <div class="p-0 overflow-hidden bg-white rounded shadow-sm sm:p-2">
+                                <img class="rounded-lg" src="https://stmik-mi.ac.id/assets/img/slider/1.jpg" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <h1 class="text-lg font-bold tracking-tight text-warna1 line-clamp-2">
+                                        Selamat Hari Ramadhan! Mari sambut bulan suci dengan penuh keberkahan dan
+                                        kebahagiaan.
+                                    </h1>
+                                    <div>
+                                        <span class="text-xs">18 Oktober 2023 18:00</span>
+                                    </div>
+                                    <p class="text-sm line-clamp-3">
+                                        Selamat Hari Ramadhan! Mari sambut bulan suci dengan penuh keberkahan dan
+                                        kebahagiaan. Di bulan yang penuh berkah ini, mari tingkatkan kualitas ibadah dan
+                                        amal sholeh kita. Manfaatkan waktu untuk memperbaiki diri, memperkuat hubungan
+                                        dengan Allah SWT dan sesama, serta memperbanyak amal kebaikan.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+
                     </div>
                 </div>
 
                 <div class="sticky w-full sm:max-w-xs top-16">
-                  @include('frontend.sections.sidebar')
+                    @include('frontend.sections.sidebar')
                 </div>
 
             </div>
 
-           
-        @include('frontend.sections.home.penelitian')
+
+            @include('frontend.sections.home.penelitian')
 
         </div>
 
     </main>
 @endsection
+@push('footer')
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".slide_next",
+                prevEl: ".slide_prev",
+            },
+
+        });
+    </script>
+@endpush

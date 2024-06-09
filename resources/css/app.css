@@ -70,10 +70,10 @@
     font-size: 20px;
 }
 .swiper-pagination-bullet .swiper-pagination-bullet-active{
-    @apply bg-warna1;
+    @apply bg-primary;
 }
 .agenda-item.active{
-    @apply border-t-warna1 bg-warna1/10 text-warna1;
+    @apply border-t-primary bg-primary/10 text-primary;
 }
 .menu_mobile{
     transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -93,4 +93,16 @@
     background: linear-gradient( 30deg, #000000 50%, rgba(0, 0, 0, 0.616)  85%);
     opacity: .8;
     z-index: 1; 
+}
+.top_footer{
+    background: #2d3e50;
+    position: relative;
+}
+.top_footer::before{
+    height: 120px;
+    display: block;
+    position: absolute;
+    content: '';
+    top: -24px;
+    background-color: #E67E22;
 }

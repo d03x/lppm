@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.index');
 });
-Route::get('/berita/{year}/{month}/{slug}.html',fn()=>view('frontend.berita.detail'))->name('berita.detail');
+Route::get('/profile/tentang-kami', fn () => view('frontend.profile.about'));
+Route::get('/berita/{year}/{month}/{slug}.html', fn () => view('frontend.berita.detail'))->name('berita.detail');
 /*
  * route admin
  */

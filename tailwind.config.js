@@ -11,8 +11,8 @@ export default {
     },
     extend: {
       colors : {
-        primary : '#134369',
-        secondary : "#d9d9d9",
+        primary : '#E67E22',
+        secondary : "#2d3e50",
         warna1 : "#246c9c",
         blue1 : '#a9cee1',
         menuHover:'#041c3b'

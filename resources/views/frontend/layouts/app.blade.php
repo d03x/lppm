@@ -18,9 +18,9 @@
 <body>
     @include('frontend.layouts.navbar.top-nav')
     @include('frontend.layouts.navbar.main-nav')
-    
-    @yield('content')
 
+    @yield('content')
+    @include('frontend.layouts.footer.footer')
     @stack('footer')
     @yield('footer')
 </body>
